@@ -1,0 +1,28 @@
+﻿
+@model List<SiteOnepiece.Models.Parent>;
+
+<main>
+    <div>
+        <h1 class="titre">Fruits du Démon</h1>
+        <br>
+        <div class="row justify-content-around">
+
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <a href="/enfant/recherche">
+                    <img src=@item.ImageURL class="img-fluid image" alt="Logia">
+                </a>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@item.Nom</h3>
+                        <p class="card-text"> <ul> <li>Nombre d'utilisateurs : @item.nombreUtilisateur</li></ul>   <ul><li>Prime moyenne de @item.MoyennePrime  million berry</li></ul>  <br>@item.Description <br>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+     </div>   
+</main>

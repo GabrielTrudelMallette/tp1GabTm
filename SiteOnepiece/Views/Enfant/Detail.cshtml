@@ -1,0 +1,97 @@
+﻿@model SiteOnepiece.Models.Enfant;
+
+<main>
+    <div class="row">
+        
+        
+
+
+            <div style="text-align: center;" class="col-4 "><img class="img-fluid imageBorder" src="@Model.ImageURL"  alt="luffy"></div>
+
+            <div  class="col-8"> 
+                <p class="texte"> 
+                    <table class="table detail">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Vrai nom</th>
+                                <th scope="col">Surnom</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">Nom :</th>
+                                <td>@Model.Nom</td>
+                                <td>@Model.Nom</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Début de la série</th>
+                                <th scope="col">Présentement</th>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">age :</th>
+                                <td>@Model.ageDebut</td>
+                                <td>@Model.agePrensent</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Début de la série</th>
+                                <th scope="col">Présentement</th>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">Équipage :</th>
+                            <td>@Model.Equipage</td>
+                            <td>@Model.Equipage</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Nom du fruit</th>
+                                <th scope="col">type</th>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">type de Fruit :</th>
+                            <td>@Model.NomFruitDemon</td>
+                            <td>@Model.typeDeFruit</td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>          
+            </div>
+
+            <br>
+            <div class="container-fluid" >
+            <form asp-action="AjouterUnEnfant" asp-controller="Favoris"  method="post">
+                <input type="hidden" name="id" value="@Model.id"/>
+                <button type="submit" class="btn btn-primary btn-lg">FAVORIS +</button>
+            </form>
+            <br>
+            </div>
+
+
+
+            <div class="container-fluid">
+                <p class="detail" style="font-size: larger;" >
+                    DESCRIPTION : <br>
+                @Model.Description
+                <br>
+                    <br>  
+                    <br>
+                    <br>
+                </p>
+            </div>
+
+        </div>
+            
+        
+
+</main>

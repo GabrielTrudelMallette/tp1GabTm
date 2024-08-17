@@ -1,0 +1,128 @@
+﻿@model SiteOnepiece.ViewModels.PageRechercheViewModel;
+
+
+<main>
+    
+    <div class="container">
+        <h1 class="titre">All Devil Fruits</h1>
+        <div class="row">
+            @{ if (Model.Resultat.Count > 0)
+            {
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="row">
+                            @foreach (dynamic item in Model.Resultat)
+                            {
+
+
+                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                    <partial name="_EnfantPartial" for="@item" />
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="card-title">@item.Nom</h3>
+                                            <p class="card-text">@item.Occupation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+            }
+            else
+                {
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                    <p>AUCUN PERSONAGE TROUVER</p>
+                    </div>
+                }
+            }
+            
+            
+
+
+            <!--  formulaire -->
+            <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="form-group">
+                   
+                    
+                    <form action="@Url.Action("Filtrer","Enfant")" method="get">
+                        <label for="vedette">Personnage vedette</label>
+                        <select class="form-control" id="vedette" name="ChoixPourPersonnageVedette">
+                            @if (Model.Criteres.ChoixPourPersonnageVedette == "Peu importe")
+                            {
+                                <option value="Peu importe" selected>Peu importe</option>
+                            }
+                            else
+                            {
+                                <option value="Peu importe">Peu importe</option>
+
+                            }
+                            @if (Model.Criteres.ChoixPourPersonnageVedette == "Oui")
+                            {
+                                <option value="Oui" selected>Oui</option>
+                            }
+                            else
+                            {
+                                <option value="Oui">Oui</option>
+                            }
+                            @if (Model.Criteres.ChoixPourPersonnageVedette == "Non")
+                            {
+                                <option value="Non" selected>Non</option>
+                            }
+                            else
+                            {
+                                <option value="Non">Non</option>
+                            }
+
+                        </select>
+                        <div class="form-group">
+                            <label for="texte">Recherche par nom</label>
+                            <input type="text" class="form-control" id="texte" value="@Model.Criteres.Nom" name="Nom">
+                        </div>
+                        <label for="number">Prime minimum</label>
+                        <input type="text" class="form-control" id="number" value="@Model.Criteres.MinPrime" name="MinPrime">
+
+                        <label for="texte">type de fruits</label>
+                        <div class="form-check">
+                            @if (Model.Criteres.EstFruitZoan)
+                            {
+                                <input class="form-check-input" type="checkbox" id="Zoan" value="true" name="EstFruitZoan" checked>
+                            }
+                            else
+                            {
+                                <input class="form-check-input" type="checkbox" id="Zoan" value="true" name="EstFruitZoan" >
+                            }
+                            <label for="Zoan">Zoan</label>
+                        </div>
+                        <div class="form-check">
+                            @if (Model.Criteres.EstFruitLogia)
+                            {
+                                <input class="form-check-input" type="checkbox" id="logia" value="true" name="EstFruitLogia" checked>
+                            }
+                            else
+                            {
+                                <input class="form-check-input" type="checkbox" id="logia" value="true" name="EstFruitLogia">
+                            }
+                            
+                            <label for="logia">Logia</label>
+                        </div>
+                        <div class="form-check">
+                            @if (Model.Criteres.EstFruitParamecia)
+                            {
+                                <input class="form-check-input" type="checkbox" id="Paramecia" value="true" name="EstFruitParamecia" checked>
+                            }
+                            else
+                            {
+                                <input class="form-check-input" type="checkbox" id="Paramecia" value="true" name="EstFruitParamecia" >
+                            }
+                            <label for="Paramecia">Paramecia</label>
+                        </div>
+                        <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+                        <button type="submit" class="btn btn-primary">Rechercher</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+       </div>
+
+
+        
+</main>

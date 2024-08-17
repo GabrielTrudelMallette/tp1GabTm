@@ -1,0 +1,55 @@
+﻿@model List<SiteOnepiece.Models.Enfant> 
+
+<main>
+    <h1 class="titre">VOS FAVORIES</h1>
+    <br>
+    <h2 style="color: black;"> vous avez @Model.Count personnages a vos favories </h2>
+    <div class="containerfavorie">
+
+
+        <table class="table-striped table">
+            <thead>
+                <tr>
+                    <th scope="col">Images</th>
+                    <th scope="col">Nom personnage</th>
+                    <th scope="col">fruit</th>
+                    <th scope="col">prime</th>
+                    <th scope="col">Retirer</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var enfant in Model)
+                {
+                    <tr>
+                        <td><img src="@enfant.ImageURL" class="img-fluid" alt="@enfant.Nom"></td>
+                        <td> @enfant.Nom</td>
+                        <td>@enfant.NomFruitDemon</td>
+                        <td>@enfant.Prime</td>
+                        <td>
+                            <form asp-action="SupprimerUnEnfant" method="post">
+                                <input type="hidden" name="id" value="@enfant.id" />
+                                <button type="submit" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+                @* <tr>
+                    <th><img src="/images/kaido2.png" class="img-fluid" alt="luffy"></th>
+                    <td>Kaido</td>
+                    <td>Uo Uo no Mi</td>
+                    <td>4 611 100 berry</td>
+                    <td><i class="fa-regular fa-trash-can"></i></td>
+                </tr>
+                <tr>
+                    <th><img src="/images/chopper2.jpg" class="img-fluid" alt="luffy"></th>
+                    <td>Chopper</td>
+                    <td> hito hito no mi model: humain</td>
+                    <td>1000 berry</td>
+                    <td><i class="fa-regular fa-trash-can"></i></td>
+                </tr> *@
+            </tbody>
+        </table>
+
+    </div>
+
+</main>

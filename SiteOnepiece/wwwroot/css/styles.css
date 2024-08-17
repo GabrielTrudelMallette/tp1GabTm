@@ -1,0 +1,123 @@
+
+/* Image background pour le body */
+body {
+    
+    background-size: cover; 
+    background-image: url(../images/Devil_Fruit_Infobox.webp);
+    background-position: center; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* container pour le body */
+.container body {
+    display:inline;
+    justify-content:space-evenly;
+    align-items: center;  
+   
+}
+
+.container{
+    background-color: gray;
+    width: auto;
+    height: auto;
+   
+}
+/* style pour tout les textes */
+.texte{
+    background-color: #ccc;
+    color: black;
+    font-size: larger;
+
+}
+
+/* Container pour mes favories */
+.containerfavorie{
+   
+    background-color: gray;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+/* style pour les td */
+td{
+    font-size: larger;
+}
+/* style pour les h2 */
+h2{
+    background-color: #ccc;
+}
+
+/* bandeau */
+.bandeau {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color:white;
+}
+/* style pour les header et footer*/
+header,footer{
+    background:#d6fdff;
+}
+
+/* style pour le corps de mes carte */
+.card-body{
+    background-color:#d6fdff;
+
+}
+/* style pour le titre de mes carte */
+ .card-title{
+     text-align: center;
+ }
+/* style pour le texte de mes carte */
+ .card-text{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+/* style pour les titre  */
+ .titre {
+   text-align: center;
+   background-color:#d6fdff;
+   color: black;
+ }
+/* style suivant son pour mes images et les borders */
+ .image{
+    width: 100%  
+ }
+ .imageBorder{
+  border-style: solid;
+  border-color: black;
+  border-width: 12px;
+ }
+
+ /* style pour mes tableau detail*/
+.detail{
+    background-color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+    
+}
+/* mes media pour la format dependant la grosseur de l'ecran */
+@media screen and (min-width: 768px) {
+    .img-fluid.image {
+        width: 100%; 
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .img-fluid.image {
+        height: 30%; 
+        width: 100%;
+    }
+}
+
+/* transition pour mes parents sur page accueil */
+.image:hover{
+    opacity: 0.5;
+    transform: rotate(25deg);
+   
+}
+ 
+
+ 
