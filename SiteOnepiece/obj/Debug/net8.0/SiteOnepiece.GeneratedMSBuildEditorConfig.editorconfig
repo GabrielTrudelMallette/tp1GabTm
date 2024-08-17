@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SiteOnepiece
 build_property.RootNamespace = SiteOnepiece
-build_property.ProjectDir = C:\Users\6221324\Desktop\tp1GabTm\SiteOnepiece\
+build_property.ProjectDir = C:\Users\gabri\OneDrive\Desktop\tp1GabTm\SiteOnepiece\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\6221324\Desktop\tp1GabTm\SiteOnepiece
+build_property.MSBuildProjectDirectory = C:\Users\gabri\OneDrive\Desktop\tp1GabTm\SiteOnepiece
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/Enfant/Detail.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/Enfant/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/Enfant/Recherche.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/Enfant/Recherche.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XFJlY2hlcmNoZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/Enfant/_EnfantPartial.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/Enfant/_EnfantPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XF9FbmZhbnRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/Favoris/Index.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/Favoris/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3Jpc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/Home/Index.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/shared/NonTrouvé.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/shared/NonTrouvé.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hhcmVkXE5vblRyb3V2w6kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/shared/_Layout.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/_ViewImports.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/6221324/Desktop/tp1GabTm/SiteOnepiece/Views/_ViewStart.cshtml]
+[C:/Users/gabri/OneDrive/Desktop/tp1GabTm/SiteOnepiece/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
