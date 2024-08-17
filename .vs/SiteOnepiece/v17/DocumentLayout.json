@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\extensions\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\models\\basededonn\u00E9es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\models\\basededonn\u00E9es.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\recherche.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\recherche.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\favoris\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\favoris\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,12 +31,12 @@
       "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\_enfantpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\viewmodels\\critererechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\viewmodels\\critererechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\viewmodels\\pagerechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\viewmodels\\pagerechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,6 +51,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\css\\styles.css",
+              "RelativeDocumentMoniker": "SiteOnepiece\\wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\css\\styles.css",
+              "RelativeToolTip": "SiteOnepiece\\wwwroot\\css\\styles.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-17T05:56:16.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Extensions\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Extensions\\SessionExtensions.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Extensions\\SessionExtensions.cs",
+              "RelativeToolTip": "SiteOnepiece\\Extensions\\SessionExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T05:56:06.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseDeDonn\u00E9es.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Models\\BaseDeDonn\u00E9es.cs",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Models\\BaseDeDonn\u00E9es.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Models\\BaseDeDonn\u00E9es.cs",
+              "RelativeToolTip": "SiteOnepiece\\Models\\BaseDeDonn\u00E9es.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T05:55:46.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Recherche.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Recherche.cshtml",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Recherche.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Recherche.cshtml",
+              "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\Recherche.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T05:55:42.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Favoris\\Index.cshtml",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Favoris\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Favoris\\Index.cshtml",
+              "RelativeToolTip": "SiteOnepiece\\Views\\Favoris\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T05:55:40.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
               "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
@@ -38,12 +123,12 @@
               "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-17T05:53:45.748Z",
+              "WhenOpened": "2024-08-17T05:55:38.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "_EnfantPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
               "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
@@ -51,33 +136,33 @@
               "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-17T05:53:43.338Z",
+              "WhenOpened": "2024-08-17T05:55:37.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CritereRechercheViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
-              "RelativeDocumentMoniker": "SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
-              "RelativeToolTip": "SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\appsettings.json",
+              "RelativeDocumentMoniker": "SiteOnepiece\\appsettings.json",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\appsettings.json",
+              "RelativeToolTip": "SiteOnepiece\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T05:53:38.772Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-17T05:55:32.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PageRechercheViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
-              "RelativeDocumentMoniker": "SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
-              "RelativeToolTip": "SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Program.cs",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Program.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Program.cs",
+              "RelativeToolTip": "SiteOnepiece\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T05:53:37.229Z",
+              "WhenOpened": "2024-08-17T05:55:25.94Z",
               "EditorCaption": ""
             }
           ]
