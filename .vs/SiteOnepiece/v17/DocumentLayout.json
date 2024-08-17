@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\_enfantpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\_enfantpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\viewmodels\\critererechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\viewmodels\\critererechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\viewmodels\\pagerechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\viewmodels\\pagerechercheviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
+              "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T05:53:45.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_EnfantPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
+              "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\_EnfantPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-17T05:53:43.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CritereRechercheViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
+              "RelativeDocumentMoniker": "SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
+              "RelativeToolTip": "SiteOnepiece\\ViewModels\\CritereRechercheViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T05:53:38.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PageRechercheViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
+              "RelativeDocumentMoniker": "SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
+              "RelativeToolTip": "SiteOnepiece\\ViewModels\\PageRechercheViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T05:53:37.229Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
