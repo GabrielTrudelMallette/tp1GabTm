@@ -1,0 +1,121 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\1349525.jpeg",
+      "PackagePath": "staticwebassets\\images\\1349525.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Akainu.jpg",
+      "PackagePath": "staticwebassets\\images\\Akainu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\BlackBeard.jpg",
+      "PackagePath": "staticwebassets\\images\\BlackBeard.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Devil_Fruit_Infobox.webp",
+      "PackagePath": "staticwebassets\\images\\Devil_Fruit_Infobox.webp"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\GEAR5.png",
+      "PackagePath": "staticwebassets\\images\\GEAR5.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Gomu_Gomu_no_Mi_Infobox.jpg",
+      "PackagePath": "staticwebassets\\images\\Gomu_Gomu_no_Mi_Infobox.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Kaido.png",
+      "PackagePath": "staticwebassets\\images\\Kaido.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Katakuri.png",
+      "PackagePath": "staticwebassets\\images\\Katakuri.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Marco.png",
+      "PackagePath": "staticwebassets\\images\\Marco.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\NicoRobin.png",
+      "PackagePath": "staticwebassets\\images\\NicoRobin.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\NonTrouver.jpg",
+      "PackagePath": "staticwebassets\\images\\NonTrouver.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\OBS-Studio-30.1.2-Full-Installer-x64.exe",
+      "PackagePath": "staticwebassets\\images\\OBS-Studio-30.1.2-Full-Installer-x64.exe"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\One_Piece_(ja)_Logo.svg.png",
+      "PackagePath": "staticwebassets\\images\\One_Piece_(ja)_Logo.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Ope_Ope_no_Mi_Infobox.jpg",
+      "PackagePath": "staticwebassets\\images\\Ope_Ope_no_Mi_Infobox.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\Suna_Suna_no_Mi_Infobox.jpg",
+      "PackagePath": "staticwebassets\\images\\Suna_Suna_no_Mi_Infobox.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\WhiteBeard.png",
+      "PackagePath": "staticwebassets\\images\\WhiteBeard.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\chopper.jpg",
+      "PackagePath": "staticwebassets\\images\\chopper.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\chopper2.jpg",
+      "PackagePath": "staticwebassets\\images\\chopper2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\crocoboy.jpg",
+      "PackagePath": "staticwebassets\\images\\crocoboy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\gear53.jpg",
+      "PackagePath": "staticwebassets\\images\\gear53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\kaido2.png",
+      "PackagePath": "staticwebassets\\images\\kaido2.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\luffy.jpg",
+      "PackagePath": "staticwebassets\\images\\luffy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\trafalgarLaw.png",
+      "PackagePath": "staticwebassets\\images\\trafalgarLaw.png"
+    },
+    {
+      "Id": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\wwwroot\\images\\tumblr_332e0c173459ad22272524d85ee374fd_f7cc668e_500.png",
+      "PackagePath": "staticwebassets\\images\\tumblr_332e0c173459ad22272524d85ee374fd_f7cc668e_500.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SiteOnepiece.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SiteOnepiece.props",
+      "PackagePath": "build\\SiteOnepiece.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SiteOnepiece.props",
+      "PackagePath": "buildMultiTargeting\\SiteOnepiece.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SiteOnepiece.props",
+      "PackagePath": "buildTransitive\\SiteOnepiece.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
