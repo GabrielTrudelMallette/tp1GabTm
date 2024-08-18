@@ -1,73 +1,41 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SiteOnepiece.Models
 {
     public class Enfant
     {
-        /// <summary>
-        /// propriété retournant le ID de l'enfant
-        /// </summary>
+        [Key]
         public int id { get; set; }
 
-        /// <summary>
-        /// propriété retournant le ID du parent
-        /// </summary>
-        public int IdParent { get; set; }
+        public string? ImageURL { get; set; }
+        [MaxLength(200)]
+        public string? Description { get; set; }
 
-        /// <summary>
-        /// propriété retournant le parent 
-        /// </summary>
-        public Parent ?Parent { get; set; }
-
-        /// <summary>
-        /// propriété retournant l'image
-        /// </summary>
-        public string ?ImageURL { get; set; }
-        /// <summary>
-        /// propriété retournant la description
-        /// </summary>
-        public string ?Description { get; set; }
-        /// <summary>
-        /// propriété retournant la prime de l'enfant
-        /// </summary>
         public double Prime { get; set; }
-        /// <summary>
-        /// propriété retournant le fruit du demon de l'enfant
-        /// </summary>
-        public string ?NomFruitDemon { get; set; }
-        /// <summary>
-        /// propriété retournant l'occupation de l'enfant
-        /// </summary>
-        public string ?Occupation { get; set; }
-        /// <summary>
-        /// propriété retournant le nom de l'enfant
-        /// </summary>
-        public string ?Nom {  get; set; }
-      
-        /// <summary>
-        /// propriété retournant si oui ou non l'enfant est vedette
-        /// </summary>
+
+        public string? NomFruitDemon { get; set; }
+        [StringLength(20, MinimumLength = 5)]
+        public string? Occupation { get; set; }
+        [StringLength(20, MinimumLength = 5)]
+        public string? Nom { get; set; }
+
         public bool EstVedette { get; set; }
-        /// <summary>
-        /// equipage de l'enfant
-        /// </summary>
-        public string ?Equipage { get; set; }
-        /// <summary>
-        /// propriété retournant l'age de l'enfant au debut de la serie
-        /// </summary>
 
+        public string? Equipage { get; set; }
+        [Range(800, 2)]
         public int ageDebut { get; set; }
-        /// <summary>
-        /// propriété retournant l'age de l'enfant a la fin de la serie
-        /// </summary>
+        [Range(800, 2)]
         public int agePrensent { get; set; }
-
-        /// <summary>
-        /// propriété retournant le type de fruit de l'enfant
-        /// </summary>
-        public string ?typeDeFruit { get; set; }
-
-
+       
+        public string? typeDeFruit { get; set; }
+        //propriété de navigation
+        [ForeignKey("Parent")]
+        public int IdParent { get; set; }
+        [ValidateNever]
+        public Parent? Parent { get; set; }
 
     }
 }

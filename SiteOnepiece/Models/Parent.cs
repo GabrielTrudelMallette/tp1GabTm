@@ -1,34 +1,22 @@
-﻿namespace SiteOnepiece.Models
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
+
+namespace SiteOnepiece.Models
 {
     public class Parent
     {
-        /// <summary>
-        /// propriété retournant l'id du parent
-        /// </summary>
+
+        [Key]
         public int Id { get; set; }
-        /// <summary>
-        /// propriété retournant le nom du parent
-        /// </summary>
-        public string ?Nom { get; set; }
-        /// <summary>
-        /// propriété retournant la liste d'enfants
-        /// </summary>
-        public List<Enfant> ?Enfants { get; set; }
-        /// <summary>
-        /// propriété retournant la Description du parent
-        /// </summary>
-        public string ?Description { get; set; }
-        /// <summary>
-        /// propriété retournant la prime moyenne des Parents
-        /// </summary>
+        [StringLength(20, MinimumLength = 5)]
+        public string? Nom { get; set; }
+        [MaxLength(200)]
+        public string? Description { get; set; }
         public int MoyennePrime { get; set; }
-        /// <summary>
-        /// propriété retournant l'images du parents
-        /// </summary>
-        public string ?ImageURL { get; set; }
-        /// <summary>
-        /// propriété retournant le nombre d'utilisateur
-        /// </summary>
+        public string? ImageURL { get; set; }
         public int nombreUtilisateur { get; set; }
+        /// propriété de navigation
+        [ValidateNever]
+        public List<Enfant>? Enfants { get; set; }
     }
 }
