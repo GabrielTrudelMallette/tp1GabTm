@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SiteOnepiece.Models;
+using SiteOnepiece.Models.data;
 using SiteOnepiece.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SiteOnepiece.Controllers
 {
     public class EnfantController : Controller
     {
-        private BaseDeDonnées DB { get; set; }
+        private OnepieceDbContext DB { get; set; }
 
-        public EnfantController(BaseDeDonnées pBd)
+        public EnfantController(OnepieceDbContext pBd)
         {
             DB = pBd;
         }
@@ -30,28 +32,28 @@ namespace SiteOnepiece.Controllers
 
         public IActionResult Detail(int id) 
         { 
-            var dresseurRecherché = DB.Enfants.Where(d => d.id == id).SingleOrDefault(); 
-            if (dresseurRecherché == null) 
+            var EnfantRecherche = DB.Enfants.Where(d => d.id == id).SingleOrDefault(); 
+            if (EnfantRecherche == null) 
             { 
                 return View("NonTrouvé", "Le numéro de dresseur n'a pas été trouvé!"); }
             
             else 
             { 
-                return View(dresseurRecherché); 
+                return View(EnfantRecherche); 
             } 
         }
         [Route("enfant/detail/{nom}")]
         [Route("detail/{nom}")]       
         public IActionResult Detail(string nom)
         {
-            var dresseurRecherché = DB.Enfants.Where(d => d.Nom.ToUpper() == nom.ToUpper()).SingleOrDefault();
-            if (dresseurRecherché == null) 
+            var EnfantRecherche = DB.Enfants.Where(d => d.Nom.ToUpper() == nom.ToUpper()).SingleOrDefault();
+            if (EnfantRecherche == null) 
             {
                 return View("NonTrouvé", "Le numéro de dresseur n'a pas été trouvé!"); 
             }
             else 
             {
-                return View(dresseurRecherché); 
+                return View(EnfantRecherche); 
             }
         }
         [Route("/Enfant/Filtrer")]
@@ -95,9 +97,28 @@ namespace SiteOnepiece.Controllers
             PageRechercheViewModel page = new PageRechercheViewModel();
             page.Criteres = criteres;
             page.Resultat = donnees.ToList();
-            return View("Recherche", page );
-            
+            return View("Recherche", page );            
         }
+
+        public IActionResult Create()
+        {
+            
+            
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Enfant enfant)
+        {
+            if (ModelState.IsValid)
+            {
+                DB.Enfants.Add(enfant);
+                DB.SaveChanges();
+                return this.RedirectToAction("Index");
+            }
+            return View(enfant);
+        }
+
 
     }
 }
