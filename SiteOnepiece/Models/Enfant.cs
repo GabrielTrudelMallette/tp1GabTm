@@ -11,7 +11,7 @@ namespace SiteOnepiece.Models
         public int id { get; set; }
 
         public string? ImageURL { get; set; }
-        [MaxLength(200)]
+      
         public string? Description { get; set; }
 
         public double Prime { get; set; }
@@ -35,7 +35,7 @@ namespace SiteOnepiece.Models
         [ForeignKey("Parent")]
         public int IdParent { get; set; }
         [ValidateNever]
-        public Parent? Parent { get; set; }
+        public Parent Parent { get; set; }
 
     }
 }
