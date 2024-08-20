@@ -99,17 +99,24 @@ namespace SiteOnepiece.Controllers
             page.Resultat = donnees.ToList();
             return View("Recherche", page );            
         }
-
+        //get create
         public IActionResult Create()
         {
-            
-            
-            return View();
+            EnfantVM enfantVM = new EnfantVM();
+            enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem 
+            { 
+                
+                Value = p.id.ToString(),
+            });
+
+
+            return View(enfantVM);
         }
 
         [HttpPost]
         public IActionResult Create(Enfant enfant)
         {
+            
             if (ModelState.IsValid)
             {
                 DB.Enfants.Add(enfant);

@@ -7,6 +7,6 @@ namespace SiteOnepiece.ViewModels
     {
         public Enfant Enfant { get; set; }  
 
-        public IList<SelectListItem> selectListItem { get; set; }
+        public IEnumerable<SelectListItem> EnfantList { get; set; }
     }
 }

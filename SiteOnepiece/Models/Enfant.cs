@@ -25,9 +25,9 @@ namespace SiteOnepiece.Models
         public bool EstVedette { get; set; }
 
         public string? Equipage { get; set; }
-        [Range(800, 2)]
+        [Range(2, 800)]
         public int ageDebut { get; set; }
-        [Range(800, 2)]
+        [Range(2, 800)]
         public int agePrensent { get; set; }
        
         public string? typeDeFruit { get; set; }
