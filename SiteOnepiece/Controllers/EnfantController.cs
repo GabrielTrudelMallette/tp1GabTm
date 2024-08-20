@@ -3,6 +3,7 @@ using SiteOnepiece.Models;
 using SiteOnepiece.Models.data;
 using SiteOnepiece.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace SiteOnepiece.Controllers
 {
@@ -99,31 +100,43 @@ namespace SiteOnepiece.Controllers
             page.Resultat = donnees.ToList();
             return View("Recherche", page );            
         }
+        public IActionResult Index()
+        {            
+            List<Enfant> EnfantList = DB.Enfants.OrderBy(p => p.Nom).ToList();
+            return View(EnfantList);
+        }
         //get create
         public IActionResult Create()
         {
             EnfantVM enfantVM = new EnfantVM();
-            enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem 
-            { 
-                
+            enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
                 Value = p.id.ToString(),
-            });
+            }).OrderBy(p => p.Text);
 
 
             return View(enfantVM);
         }
 
         [HttpPost]
-        public IActionResult Create(Enfant enfant)
-        {
-            
+        public IActionResult Create(EnfantVM enfantVM)
+        {            
             if (ModelState.IsValid)
             {
-                DB.Enfants.Add(enfant);
+                DB.Enfants.Add(enfantVM.Enfant);
                 DB.SaveChanges();
+                TempData["Ajouter"] = $" Pirate {enfantVM.Enfant.Nom} Ajouter";
                 return this.RedirectToAction("Index");
             }
-            return View(enfant);
+
+            enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
+                Value = p.id.ToString(),
+            }).OrderBy(p => p.Text);
+
+            return View(enfantVM);
         }
 
 
