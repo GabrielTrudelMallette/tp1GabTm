@@ -28,7 +28,7 @@ namespace SiteOnepiece.Models
         [Range(2, 800)]
         public int ageDebut { get; set; }
         [Range(2, 800)]
-        public int agePrensent { get; set; }
+        public int? agePrensent { get; set; }
        
         public string? typeDeFruit { get; set; }
         //propriété de navigation

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Enfant>
+﻿@model IEnumerable<SiteOnepiece.Models.Enfant>
 
 <div class="container py-4">
     <div class="row mb-4">
@@ -24,9 +24,12 @@
                         
                         <h5 class="card-subtitle mb-2 text-muted">Fruit du Démon : @item.NomFruitDemon </h5>
                         <h5 class="text-success">Occupation : @item.Occupation </h5>
-                        <a asp-action="Create" asp-route-Id="@item.id" class="btn btn-info mt-3">
-                            Modifier
-                        </a>
+                        <td>
+                            <a asp-action="Edit" asp-route-Id="@item.id" class="btn btn-info mt-3">
+                                Modifier
+                            </a>
+                        </td>                       
+                        
                     </div>
                 </div>
             </div>

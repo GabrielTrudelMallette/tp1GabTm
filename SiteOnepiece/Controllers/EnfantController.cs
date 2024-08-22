@@ -130,7 +130,7 @@ namespace SiteOnepiece.Controllers
                 return this.RedirectToAction("Index");
             }
 
-            enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            ViewBag.EnfantList = DB.Enfants.Select(p => new SelectListItem
             {
                 Text = p.Nom,
                 Value = p.id.ToString(),
@@ -139,6 +139,52 @@ namespace SiteOnepiece.Controllers
             return View(enfantVM);
         }
 
+        
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var Enfant = DB.Enfants.Find(id);
+            if (Enfant == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.EnfantList = DB.Enfants.Select(t => new SelectListItem
+            {
+                Text = t.Nom,
+                Value = t.id.ToString()
+            });
+
+            return View(Enfant);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Enfant enfant)
+        {
+            if (id != enfant.id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+               DB.Update(enfant);
+                DB.SaveChanges();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewBag.EnfantList = DB.Enfants.Select(t => new SelectListItem
+            {
+                Text = t.Nom,
+                Value = t.id.ToString()
+            });
+
+            return View(enfant);
+        }
     }
 }

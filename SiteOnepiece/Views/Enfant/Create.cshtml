@@ -50,7 +50,7 @@
                 <div class="form-group row mb-4">
                     <label asp-for="@Model.Enfant.typeDeFruit" class="col-sm-4 col-form-label">Type de Fruit</label>
                     <div class="col-sm-8">
-                        <select class="form-control" asp-for="@Model.Enfant.IdParent" asp-items="@ViewBag.Enfant"></select>
+                        <select class="form-control" asp-for="@Model.Enfant.IdParent" asp-items="@ViewBag.ListEnfant"></select>
                         <span asp-validation-for="@Model.Enfant.IdParent" class="text-danger"></span>
                     </div>
                 </div>
