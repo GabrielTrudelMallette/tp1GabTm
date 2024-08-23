@@ -3,8 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\6221324\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\6221324\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,10 +18,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\6221324\\desktop\\tp1gabtm\\siteonepiece\\controllers\\enfantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\controllers\\enfantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< Updated upstream
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\6221324\\desktop\\tp1gabtm\\siteonepiece\\models\\enfant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\models\\enfant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -31,6 +39,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
               "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Detail.cshtml",
@@ -39,11 +48,22 @@
               "ViewState": "AQIAADwAAAAAAAAAAAAUwE4AAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-23T01:53:05.662Z",
+=======
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Create.cshtml",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Create.cshtml",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Create.cshtml",
+              "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAcwCwAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T09:32:27.313Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\6221324\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Delete.cshtml",
               "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Delete.cshtml",
@@ -99,6 +119,16 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T01:14:43.48Z",
+=======
+              "Title": "EnfantController.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Controllers\\EnfantController.cs",
+              "RelativeDocumentMoniker": "SiteOnepiece\\Controllers\\EnfantController.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Controllers\\EnfantController.cs",
+              "RelativeToolTip": "SiteOnepiece\\Controllers\\EnfantController.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAHYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T09:29:04.168Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             }
           ]
