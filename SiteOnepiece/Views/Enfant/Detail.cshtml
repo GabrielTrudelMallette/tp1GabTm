@@ -74,6 +74,10 @@
                 <input type="hidden" name="id" value="@Model.id"/>
                 <button type="submit" class="btn btn-primary btn-lg">FAVORIS +</button>
             </form>
+            <form asp-action="DeleteUnEnfant" asp-controller="Delete" method="post">
+                <input type="hidden" name="id" value="@Model.id" />
+                <button type="submit" class="btn btn-primary btn-lg">DELETE +</button>
+            </form>
             <br>
             </div>
 

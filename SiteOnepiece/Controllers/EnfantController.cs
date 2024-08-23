@@ -110,7 +110,7 @@ namespace SiteOnepiece.Controllers
         public IActionResult Create()
         {
             EnfantVM enfantVM = new EnfantVM();
-            enfantVM.EnfantList = DB.Parents.Select(p => new SelectListItem
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
                 Value = p.Id.ToString()
@@ -129,7 +129,7 @@ namespace SiteOnepiece.Controllers
                 TempData["Ajouter"] = $" Pirate {enfantVM.Enfant.Nom} Ajouter";
                 return this.RedirectToAction("Index");
             }
-            enfantVM.EnfantList = DB.Parents.Select(p => new SelectListItem
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
                 Value = p.Id.ToString()
@@ -137,53 +137,66 @@ namespace SiteOnepiece.Controllers
 
             return View(enfantVM);
         }
-
-        
-        public IActionResult Edit(int id)
+        [Route("Enfant/Delete")]
+        public IActionResult Delete(int id)
         {
-            if (id == null)
+            Enfant? enfant = DB.Enfants.Include(p => p.Parent).FirstOrDefault(p => p.id == id);
+            if (enfant == null)
             {
                 return NotFound();
             }
-
-            var Enfant = DB.Enfants.Find(id);
-            if (Enfant == null)
-            {
-                return NotFound();
-            }
-
-            ViewBag.EnfantList = DB.Enfants.Select(t => new SelectListItem
-            {
-                Text = t.Nom,
-                Value = t.id.ToString()
-            });
-
-            return View(Enfant);
+            return View(enfant);
         }
 
-        [HttpPost]
-        public IActionResult Edit(int id, Enfant enfant)
+        [HttpPost("Enfant/Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int id)
         {
-            if (id != enfant.id)
+            Enfant? enfant = DB.Enfants.Include(p => p.Parent).FirstOrDefault(p => p.id == id);
+            if (enfant == null)
             {
                 return NotFound();
             }
+            DB.Enfants.Remove(enfant);
+            DB.SaveChanges();
+            TempData["Delete"] = $"Enfant {enfant.Nom} a été supprimer";
+            return RedirectToAction("Index");
+        }
+        [Route("Enfant/Edit")]
+        public IActionResult Edit(int id)
+        {
+            EnfantVM enfantVM = new EnfantVM();
+            enfantVM.Enfant = DB.Enfants.Find(id);
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
+                Value = p.Id.ToString()
+            }).OrderBy(p => p.Text);
+
+            
+
+            return View(enfantVM);
+        }
+
+        [HttpPost("Enfant/Edit")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(EnfantVM enfantVM)
+        {
 
             if (ModelState.IsValid)
             {
-               DB.Update(enfant);
+                DB.Enfants.Update(enfantVM.Enfant);
                 DB.SaveChanges();
-
-                return RedirectToAction(nameof(Index));
+                TempData["Modifier"] = $"Enfant {enfantVM.Enfant.Nom} a été modifier";
+                return this.RedirectToAction("index");
             }
-
-            ViewBag.EnfantList = DB.Enfants.Select(t => new SelectListItem
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
             {
-                Text = t.Nom,
-                Value = t.id.ToString()
-            });
+                Text = p.Nom,
+                Value = p.Id.ToString()
+            }).OrderBy(p => p.Text);
 
-            return View(enfant);
+            return View(enfantVM);
         }
     }
 }
