@@ -109,6 +109,7 @@ namespace SiteOnepiece.Controllers
         [Route("Enfant/Create")]
         public IActionResult Create()
         {
+<<<<<<< Updated upstream
             EnfantVM enfantVM = new EnfantVM();
             enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
             {
@@ -121,21 +122,45 @@ namespace SiteOnepiece.Controllers
 
         [HttpPost("Enfant/Create")]
         public IActionResult Create(EnfantVM enfantVM)
+=======
+            //EnfantVM enfantVM = new EnfantVM();
+            //enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            //{
+            //    Text = p.Nom,
+            //    Value = p.id.ToString(),
+            //}).OrderBy(p => p.Text);
+
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Enfant enfant)
+>>>>>>> Stashed changes
         {            
             if (ModelState.IsValid)
             {
-                DB.Enfants.Add(enfantVM.Enfant);
+                DB.Enfants.Add(enfant);
                 DB.SaveChanges();
-                TempData["Ajouter"] = $" Pirate {enfantVM.Enfant.Nom} Ajouter";
+                TempData["Ajouter"] = $" Pirate {enfant.Nom} Ajouter";
                 return this.RedirectToAction("Index");
             }
+<<<<<<< Updated upstream
             enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
                 Value = p.Id.ToString()
             }).OrderBy(p => p.Text);
+=======
 
-            return View(enfantVM);
+            //ViewBag.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            //{
+            //    Text = p.Nom,
+            //    Value = p.id.ToString(),
+            //}).OrderBy(p => p.Text);
+>>>>>>> Stashed changes
+
+            return View(enfant);
         }
         [Route("Enfant/Delete")]
         public IActionResult Delete(int id)
