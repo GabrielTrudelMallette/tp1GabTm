@@ -11,9 +11,9 @@
 
     <div class="row">
         <div class="col-md-6">
-            <form asp-action="Edit">
+            <form asp-action="EditPost">
                 <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-                
+                <input asp-for="@Model.Enfant.id" class="form-control" hidden />
                 <!-- Nom -->
                 <div class="mb-3">
                     <label asp-for="@Model.Enfant.Nom" class="form-label"></label>
@@ -45,7 +45,7 @@
                 <!-- image   -->
                 <div class="mb-3">
                     
-                    <input hidden asp-for="@Model.Enfant.ImageURL" value="/images/luffy.jpg" class="form-control" />
+                    <input asp-for="@Model.Enfant.ImageURL" class="form-control" />
                     <span asp-validation-for="@Model.Enfant.ImageURL" class="text-danger"></span>
                 </div>
                 <!-- description   -->

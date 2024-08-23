@@ -121,6 +121,7 @@ namespace SiteOnepiece.Controllers
         }
 
         [HttpPost("Enfant/Create")]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(EnfantVM enfantVM) 
         {
             if (ModelState.IsValid)
@@ -138,7 +139,7 @@ namespace SiteOnepiece.Controllers
             }).OrderBy(p => p.Text);
 
 
-            return View();
+            return View(enfantVM);
         }
 
        
@@ -185,7 +186,7 @@ namespace SiteOnepiece.Controllers
 
         [HttpPost("Enfant/Edit")]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(EnfantVM enfantVM)
+        public IActionResult EditPost(EnfantVM enfantVM)
         {
 
             if (ModelState.IsValid)
