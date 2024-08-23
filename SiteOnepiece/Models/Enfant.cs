@@ -32,6 +32,7 @@ namespace SiteOnepiece.Models
        
         public string? typeDeFruit { get; set; }
         //propriété de navigation
+        [Display(Name = "Nom du parent")]
         [ForeignKey("Parent")]
         public int IdParent { get; set; }
         [ValidateNever]

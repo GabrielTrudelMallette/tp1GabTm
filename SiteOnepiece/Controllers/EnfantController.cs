@@ -106,20 +106,20 @@ namespace SiteOnepiece.Controllers
             return View(EnfantList);
         }
         //get create
+        [Route("Enfant/Create")]
         public IActionResult Create()
         {
             EnfantVM enfantVM = new EnfantVM();
-            enfantVM.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            enfantVM.EnfantList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
-                Value = p.id.ToString(),
+                Value = p.Id.ToString()
             }).OrderBy(p => p.Text);
-
 
             return View(enfantVM);
         }
 
-        [HttpPost]
+        [HttpPost("Enfant/Create")]
         public IActionResult Create(EnfantVM enfantVM)
         {            
             if (ModelState.IsValid)
@@ -129,18 +129,17 @@ namespace SiteOnepiece.Controllers
                 TempData["Ajouter"] = $" Pirate {enfantVM.Enfant.Nom} Ajouter";
                 return this.RedirectToAction("Index");
             }
-
-            ViewBag.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            enfantVM.EnfantList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
-                Value = p.id.ToString(),
+                Value = p.Id.ToString()
             }).OrderBy(p => p.Text);
 
             return View(enfantVM);
         }
 
         
-        public IActionResult Edit(int? id)
+        public IActionResult Edit(int id)
         {
             if (id == null)
             {

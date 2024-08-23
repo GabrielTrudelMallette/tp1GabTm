@@ -22,37 +22,34 @@ namespace SiteOnepiece.Controllers
         }
 
         //get create
+        [Route("Parent/Create")]
         public IActionResult Create()
         {
-            ParentVM parentVM = new ParentVM();
-            parentVM.ParentList = DB.Enfants.Select(p => new SelectListItem
-            {
-                Text = p.Nom,
-                Value = p.id.ToString(),
-            }).OrderBy(p => p.Text);
+            
+           
 
-
-            return View(parentVM);
+            return View();
         }
 
-        [HttpPost]
-        public IActionResult Create(ParentVM parentVM)
+        [HttpPost("Parent/Create")]
+        
+        public IActionResult Create(Parent parent)
         {
             if (ModelState.IsValid)
             {
-                DB.Parents.Add(parentVM.Parent);
+                DB.Parents.Add(parent);
                 DB.SaveChanges();
-                TempData["Ajouter"] = $" Pirate {parentVM.Parent.Nom} Ajouter";
+                TempData["Ajouter"] = $" Pirate {parent.Nom} Ajouter";
                 return this.RedirectToAction("Index");
             }
 
-            ViewBag.EnfantList = DB.Enfants.Select(p => new SelectListItem
+            ViewBag.ParentList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
-                Value = p.id.ToString(),
+                Value = p.Id.ToString(),
             }).OrderBy(p => p.Text);
 
-            return View(parentVM);
+            return View(parent);
         }
 
         public IActionResult Edit(int? id)
