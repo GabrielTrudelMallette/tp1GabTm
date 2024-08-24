@@ -1,0 +1,59 @@
+﻿@model SiteOnepiece.Models.Parent
+
+@{
+    ViewData["Title"] = "Editer un Pirate";
+}
+
+<div class="container mt-4">
+
+    <h4>Détails du Pirate</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="EditPost">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input asp-for="@Model.Id" class="form-control" hidden />
+                <!-- Nom -->
+                <div class="mb-3">
+                    <label asp-for="@Model.Nom" class="form-label"></label>
+                    <input asp-for="@Model.Nom" class="form-control" />
+                    <span asp-validation-for="@Model.Nom" class="text-danger"></span>
+                </div>                                            
+                <!-- image   -->
+                <div class="mb-3">
+
+                    <input asp-for="@Model.ImageURL" class="form-control" />
+                    <span asp-validation-for="@Model.ImageURL" value ="images/chopper.jpg" class="text-danger"></span>
+                </div>
+                <!-- description   -->
+                <div class="mb-3">
+                    <label asp-for="@Model.Description" class="form-label"></label>
+                    <input asp-for="@Model.Description" class="form-control" />
+                    <span asp-validation-for="@Model.Description" class="text-danger"></span>
+                </div>                                          
+                <!-- Moyenne Prime   -->
+                <div class="mb-3">
+                    <label hidden asp-for="@Model.MoyennePrime" class="form-label"></label>
+                    <input hidden asp-for="@Model.MoyennePrime" class="form-control" />
+                    <span asp-validation-for="@Model.MoyennePrime" class="text-danger"></span>
+                </div>
+                <!-- nombre utilisateur   -->
+                <div class="mb-3">
+                    <label hidden asp-for="@Model.nombreUtilisateur" class="form-label"></label>
+                    <input hidden asp-for="@Model.nombreUtilisateur" class="form-control" />
+                    <span asp-validation-for="@Model.nombreUtilisateur" class="text-danger"></span>
+                </div>
+
+                <div class="d-grid">
+                    <input type="submit" value="Edit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+    </div>
+</div>
+
