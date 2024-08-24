@@ -24,15 +24,12 @@ namespace SiteOnepiece.Controllers
         //get create
         [Route("Parent/Create")]
         public IActionResult Create()
-        {
-            
-           
-
+        {          
             return View();
         }
 
         [HttpPost("Parent/Create")]
-        
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Parent parent)
         {
             if (ModelState.IsValid)
@@ -41,13 +38,7 @@ namespace SiteOnepiece.Controllers
                 DB.SaveChanges();
                 TempData["Ajouter"] = $" Pirate {parent.Nom} Ajouter";
                 return this.RedirectToAction("Index");
-            }
-
-            ViewBag.ParentList = DB.Parents.Select(p => new SelectListItem
-            {
-                Text = p.Nom,
-                Value = p.Id.ToString(),
-            }).OrderBy(p => p.Text);
+            }          
 
             return View(parent);
         }

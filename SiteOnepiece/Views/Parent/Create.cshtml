@@ -1,32 +1,75 @@
 ﻿@model SiteOnepiece.Models.Parent
-
 @{
     ViewData["Title"] = "Create";
 }
+<h1>Create ton grand - pirate</h1>
 
-<form method="post" asp-action="Create">
-    <div class="container py-4">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <input type="hidden" asp-for="@Model.Nom" />
-
-        <!-- Title Section -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="text-center text-primary border-bottom pb-2">Crée ton propre Grand pirate</h2>
-            </div>
-        </div>
-
-        <!-- Form Fields Section -->
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <!-- Nom -->
-                <div class="form-group row mb-3">
-                    <label asp-for="@Model.Nom" class="col-sm-4 col-form-label">Nom du Pirate</label>
-                    <div class="col-sm-8">
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="row p-3 ">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <input asp-for="@Model.Id" class="form-control" hidden />
+                    
+                    <div class="col-4">
+                        <label asp-for="@Model.Nom" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
                         <input asp-for="@Model.Nom" class="form-control" />
                         <span asp-validation-for="@Model.Nom" class="text-danger"></span>
                     </div>
                 </div>
-                </>
-               
-</form>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="@Model.Description" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="@Model.Description" class="form-control" />
+                        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label hidden asp-for="@Model.MoyennePrime" class="control-label"></label>
+                    </div>
+                    <div class="col-8">                       
+                        <span asp-validation-for="@Model.MoyennePrime" value ="10" class="text-danger"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label hidden asp-for="@Model.ImageURL" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
+                       
+                        <span asp-validation-for="@Model.ImageURL" value="/images/Suna_Suna_no_Mi_Infobox.jpg" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label hidden asp-for="@Model.nombreUtilisateur" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
+                       
+                        <span  asp-validation-for="@Model.nombreUtilisateur" value="20" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row  py-2">
+                    <div class="col-10 offset-4 row">
+                        <div class="col-5">
+                            <input type="submit" class="btn btn-success w-100" value="Create" />
+                        </div>
+                        <div class="col-5">
+                            <a asp-action="Index" class="btn btn-secondary w-100">Back to list</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
