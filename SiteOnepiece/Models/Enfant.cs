@@ -11,7 +11,7 @@ namespace SiteOnepiece.Models
         public int id { get; set; }
 
         public string? ImageURL { get; set; }
-        [MaxLength(200)]
+      
         public string? Description { get; set; }
 
         public double Prime { get; set; }
@@ -25,17 +25,18 @@ namespace SiteOnepiece.Models
         public bool EstVedette { get; set; }
 
         public string? Equipage { get; set; }
-        [Range(800, 2)]
+        [Range(2, 800)]
         public int ageDebut { get; set; }
-        [Range(800, 2)]
-        public int agePrensent { get; set; }
+        [Range(2, 800)]
+        public int? agePrensent { get; set; }
        
         public string? typeDeFruit { get; set; }
         //propriété de navigation
+        [Display(Name = "Nom du parent")]
         [ForeignKey("Parent")]
         public int IdParent { get; set; }
         [ValidateNever]
-        public Parent? Parent { get; set; }
+        public Parent Parent { get; set; }
 
     }
 }

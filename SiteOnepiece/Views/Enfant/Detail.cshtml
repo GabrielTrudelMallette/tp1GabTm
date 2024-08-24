@@ -1,97 +1,64 @@
-﻿@model SiteOnepiece.Models.Enfant;
+﻿@model SiteOnepiece.Models.Enfant
 
 <main>
     <div class="row">
-        
-        
+        <!-- Image Section -->
+        <div class="col-4 text-center">
+            <img class="img-fluid imageBorder" src="@Model.ImageURL" alt="Image de @Model.Nom">
+        </div>
 
+        <!-- Details Section -->
+        <div class="col-8">
+            <table class="table detail">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Début de la série</th>
+                        <th scope="col">Présentement</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th scope="row">Nom :</th>
+                        <td>@Model.Nom</td>
+                        <td>@Model.Nom</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Âge :</th>
+                        <td>@Model.ageDebut</td>
+                        <td>@Model.agePrensent</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Équipage :</th>
+                        <td>@Model.Equipage</td>
+                        <td>@Model.Equipage</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Type de Fruit :</th>
+                        <td>@Model.NomFruitDemon</td>
+                        <td>@Model.typeDeFruit</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div style="text-align: center;" class="col-4 "><img class="img-fluid imageBorder" src="@Model.ImageURL"  alt="luffy"></div>
-
-            <div  class="col-8"> 
-                <p class="texte"> 
-                    <table class="table detail">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Vrai nom</th>
-                                <th scope="col">Surnom</th>
-
-                            </tr>
-                        </thead>
-                        <tbody class="table-group-divider">
-                            <tr>
-                                <th scope="row">Nom :</th>
-                                <td>@Model.Nom</td>
-                                <td>@Model.Nom</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Début de la série</th>
-                                <th scope="col">Présentement</th>
-
-
-                            </tr>
-                            <tr>
-                                <th scope="row">age :</th>
-                                <td>@Model.ageDebut</td>
-                                <td>@Model.agePrensent</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Début de la série</th>
-                                <th scope="col">Présentement</th>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">Équipage :</th>
-                            <td>@Model.Equipage</td>
-                            <td>@Model.Equipage</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Nom du fruit</th>
-                                <th scope="col">type</th>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">type de Fruit :</th>
-                            <td>@Model.NomFruitDemon</td>
-                            <td>@Model.typeDeFruit</td>
-                        </tr>
-
-                        </tbody>
-
-                    </table>          
+            <!-- Actions -->
+            <div class="d-flex justify-content-start my-3">
+                <form asp-action="AjouterUnEnfant" asp-controller="Favoris" method="post" class="me-2">
+                    <input type="hidden" name="id" value="@Model.id" />
+                    <button type="submit" class="btn btn-primary btn-lg">Ajouter aux Favoris</button>
+                </form>
+                <a asp-action="Delete" asp-route-Id="@Model.id" class="btn btn-danger btn-lg">
+                    Supprimer
+                </a>
             </div>
 
-            <br>
-            <div class="container-fluid" >
-            <form asp-action="AjouterUnEnfant" asp-controller="Favoris"  method="post">
-                <input type="hidden" name="id" value="@Model.id"/>
-                <button type="submit" class="btn btn-primary btn-lg">FAVORIS +</button>
-            </form>
-            <br>
-            </div>
-
-
-
+            <!-- Description -->
             <div class="container-fluid">
-                <p class="detail" style="font-size: larger;" >
-                    DESCRIPTION : <br>
-                @Model.Description
-                <br>
-                    <br>  
-                    <br>
-                    <br>
+                <h3>Description</h3>
+                <p class="detail" style="font-size: larger;">
+                    @Model.Description
                 </p>
             </div>
-
         </div>
-            
-        
-
+    </div>
 </main>

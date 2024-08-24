@@ -1,20 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SiteOnepiece.Models;
+using SiteOnepiece.Models.data;
 
 namespace SiteOnepiece.Controllers
 {
     public class HomeController : Controller
     {
-        private BaseDeDonnées DB { get; set; }
+        private OnepieceDbContext DB { get; set; }
 
-        public HomeController(BaseDeDonnées pBd)
+        public HomeController(OnepieceDbContext pBd)
         {
             DB = pBd;
         }
         public IActionResult Index()
         {
-            
-            return View(DB.Parents.ToList());
+            List<Parent> parent = DB.Parents.ToList();
+            return View(parent);
         }
     }
 }

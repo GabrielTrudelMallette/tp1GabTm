@@ -1,14 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SiteOnepiece.Models;
+using SiteOnepiece.Models.data;
 using SiteOnepiece.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace SiteOnepiece.Controllers
 {
     public class EnfantController : Controller
     {
-        private BaseDeDonnées DB { get; set; }
+        private OnepieceDbContext DB { get; set; }
 
-        public EnfantController(BaseDeDonnées pBd)
+        public EnfantController(OnepieceDbContext pBd)
         {
             DB = pBd;
         }
@@ -28,30 +31,30 @@ namespace SiteOnepiece.Controllers
         [Route("{id:int}")]
 
 
-        public IActionResult Detail(int id) 
-        { 
-            var dresseurRecherché = DB.Enfants.Where(d => d.id == id).SingleOrDefault(); 
-            if (dresseurRecherché == null) 
-            { 
+        public IActionResult Detail(int id)
+        {
+            var EnfantRecherche = DB.Enfants.Where(d => d.id == id).SingleOrDefault();
+            if (EnfantRecherche == null)
+            {
                 return View("NonTrouvé", "Le numéro de dresseur n'a pas été trouvé!"); }
-            
-            else 
-            { 
-                return View(dresseurRecherché); 
-            } 
+
+            else
+            {
+                return View(EnfantRecherche);
+            }
         }
         [Route("enfant/detail/{nom}")]
-        [Route("detail/{nom}")]       
+        [Route("detail/{nom}")]
         public IActionResult Detail(string nom)
         {
-            var dresseurRecherché = DB.Enfants.Where(d => d.Nom.ToUpper() == nom.ToUpper()).SingleOrDefault();
-            if (dresseurRecherché == null) 
+            var EnfantRecherche = DB.Enfants.Where(d => d.Nom.ToUpper() == nom.ToUpper()).SingleOrDefault();
+            if (EnfantRecherche == null)
             {
-                return View("NonTrouvé", "Le numéro de dresseur n'a pas été trouvé!"); 
+                return View("NonTrouvé", "Le numéro de dresseur n'a pas été trouvé!");
             }
-            else 
+            else
             {
-                return View(dresseurRecherché); 
+                return View(EnfantRecherche);
             }
         }
         [Route("/Enfant/Filtrer")]
@@ -60,7 +63,7 @@ namespace SiteOnepiece.Controllers
             IEnumerable<Enfant> donnees = DB.Enfants;
 
 
-            if (criteres.Nom  !=  null)
+            if (criteres.Nom != null)
             {
                 donnees = donnees.Where(j => j.Nom.ToUpper().Contains(criteres.Nom.ToUpper()));
             }
@@ -68,7 +71,7 @@ namespace SiteOnepiece.Controllers
             {
                 donnees = donnees.Where(j => j.IdParent != 1);
             }
-            if (!criteres.EstFruitZoan) 
+            if (!criteres.EstFruitZoan)
             {
                 donnees = donnees.Where(j => j.IdParent != 2);
             }
@@ -95,9 +98,111 @@ namespace SiteOnepiece.Controllers
             PageRechercheViewModel page = new PageRechercheViewModel();
             page.Criteres = criteres;
             page.Resultat = donnees.ToList();
-            return View("Recherche", page );
-            
+            return View("Recherche", page);
+        }
+        public IActionResult Index()
+        {
+            List<Enfant> EnfantList = DB.Enfants.OrderBy(p => p.Nom).ToList();
+            return View(EnfantList);
+        }
+        //get create
+        [Route("Enfant/Create")]
+        public IActionResult Create()
+        {
+
+            EnfantVM enfantVM = new EnfantVM();
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
+                Value = p.Id.ToString()
+            }).OrderBy(p => p.Text);
+
+            return View(enfantVM);
         }
 
+        [HttpPost("Enfant/Create")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(EnfantVM enfantVM) 
+        {
+            if (ModelState.IsValid)
+            {
+                DB.Enfants.Add(enfantVM.Enfant);
+                DB.SaveChanges();
+                TempData["Success"] = $"Pirate {enfantVM.Enfant.Nom} a été ajouter";
+                return this.RedirectToAction("Index");
+            }
+            
+            enfantVM.ParentList = DB.Enfants.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
+                Value = p.id.ToString(),
+            }).OrderBy(p => p.Text);
+
+
+            return View(enfantVM);
+        }
+
+       
+        [Route("Enfant/Delete")]
+        public IActionResult Delete(int id)
+        {
+            Enfant? enfant = DB.Enfants.Include(p => p.Parent).FirstOrDefault(p => p.id == id);
+            if (enfant == null)
+            {
+                return NotFound();
+            }
+            return View(enfant);
+        }
+
+        [HttpPost("Enfant/Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int id)
+        {
+            Enfant? enfant = DB.Enfants.Include(p => p.Parent).FirstOrDefault(p => p.id == id);
+            if (enfant == null)
+            {
+                return NotFound();
+            }
+            DB.Enfants.Remove(enfant);
+            DB.SaveChanges();
+            TempData["Delete"] = $"Enfant {enfant.Nom} a été supprimer";
+            return RedirectToAction("Index");
+        }
+        [Route("Enfant/Edit")]
+        public IActionResult Edit(int id)
+        {
+            EnfantVM enfantVM = new EnfantVM();
+            enfantVM.Enfant = DB.Enfants.Find(id);
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
+                Value = p.Id.ToString()
+            }).OrderBy(p => p.Text);
+
+            
+
+            return View(enfantVM);
+        }
+
+        [HttpPost("Enfant/Edit")]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditPost(EnfantVM enfantVM)
+        {
+
+            if (ModelState.IsValid)
+            {
+                DB.Enfants.Update(enfantVM.Enfant);
+                DB.SaveChanges();
+                TempData["Modifier"] = $"Enfant {enfantVM.Enfant.Nom} a été modifier";
+                return this.RedirectToAction("index");
+            }
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
+            {
+                Text = p.Nom,
+                Value = p.Id.ToString()
+            }).OrderBy(p => p.Text);
+
+            return View(enfantVM);
+        }
     }
 }

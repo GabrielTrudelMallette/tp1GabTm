@@ -2,14 +2,15 @@
 using SiteOnepiece.Models;
 using SiteOnepiece.Extensions;
 using Microsoft.AspNetCore.Http;
+using SiteOnepiece.Models.data;
 
 namespace SiteOnepiece.Controllers
 {
     public class FavorisController : Controller
     {
-        private BaseDeDonnées DB { get; set; }
+        private OnepieceDbContext DB { get; set; }
 
-        public FavorisController(BaseDeDonnées pBd)
+        public FavorisController(OnepieceDbContext pBd)
         {
             DB = pBd;
         }
