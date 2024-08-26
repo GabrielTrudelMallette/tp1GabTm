@@ -1,0 +1,13 @@
+﻿@model SiteOnepiece.Models.Enfant
+
+<a href="/enfant/detail/@Model.id">
+    <img src=@Model.ImageURL class="img-fluid imageBorder" alt="LogiaBB"><br>
+    <h5 class="card-subtitle mb-2 text-muted">Fruit du Démon : @Model.NomFruitDemon </h5>
+    <h5 class="text-success">Occupation : @Model.Occupation </h5>
+    <td>
+        <a asp-action="Edit" asp-route-Id="@Model.id" class="btn btn-info mt-3 fa-solid fa-pen-to-square ">
+            Modifier
+        </a>
+    </td>
+</a>
+

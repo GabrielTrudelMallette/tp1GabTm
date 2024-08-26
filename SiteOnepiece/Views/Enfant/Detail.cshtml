@@ -45,9 +45,9 @@
             <div class="d-flex justify-content-start my-3">
                 <form asp-action="AjouterUnEnfant" asp-controller="Favoris" method="post" class="me-2">
                     <input type="hidden" name="id" value="@Model.id" />
-                    <button type="submit" class="btn btn-primary btn-lg">Ajouter aux Favoris</button>
+                    <button type="submit" class="btn btn-primary btn-lg fa-solid fa-user-plus">Ajouter aux Favoris</button>
                 </form>
-                <a asp-action="Delete" asp-route-Id="@Model.id" class="btn btn-danger btn-lg">
+                <a asp-action="Delete" asp-route-Id="@Model.id" class="btn btn-danger btn-lg fa-solid fa-trash">
                     Supprimer
                 </a>
             </div>

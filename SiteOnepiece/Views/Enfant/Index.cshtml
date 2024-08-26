@@ -20,15 +20,9 @@
                     <div class="card-body text-center bg-light">
                         <h3 class="card-title text-dark"> @item.Nom </h3>
                         
-                        <partial name="_EnfantPartial" for="@item" />
+                        <partial name="_EnfantBouton" for="@item" />
                         
-                        <h5 class="card-subtitle mb-2 text-muted">Fruit du Démon : @item.NomFruitDemon </h5>
-                        <h5 class="text-success">Occupation : @item.Occupation </h5>
-                        <td>
-                            <a asp-action="Edit" asp-route-Id="@item.id" class="btn btn-info mt-3">
-                                Modifier
-                            </a>
-                        </td>                       
+                                     
                         
                     </div>
                 </div>

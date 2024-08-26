@@ -1,128 +1,109 @@
-﻿@model SiteOnepiece.ViewModels.PageRechercheViewModel;
-
+﻿@model SiteOnepiece.ViewModels.PageRechercheViewModel
 
 <main>
-    
     <div class="container">
-        <h1 class="titre">All Devil Fruits</h1>
         <div class="row">
-            @{ if (Model.Resultat.Count > 0)
-            {
-                    <div class="col-md-9 col-sm-12 col-xs-12">
-                        <div class="row">
-                            @foreach (dynamic item in Model.Resultat)
-                            {
+            <!-- Formulaire de recherche en haut -->
+            <div class="col-md-3 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Filtrer les résultats</h4>
+                        <form action="@Url.Action("Filtrer", "Enfant")" method="get">
+                            <div class="mb-3">
+                                <label for="vedette" class="form-label">Personnage vedette</label>
+                                <select class="form-control" id="vedette" name="ChoixPourPersonnageVedette">
+                                    @if (Model.Criteres.ChoixPourPersonnageVedette == "Peu importe")
+                                    {
+                                        <option value="Peu importe" selected>Peu importe</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Peu importe">Peu importe</option>
 
+                                    }
+                                    @if (Model.Criteres.ChoixPourPersonnageVedette == "Oui")
+                                    {
+                                        <option value="Oui" selected>Oui</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Oui">Oui</option>
+                                    }
+                                    @if (Model.Criteres.ChoixPourPersonnageVedette == "Non")
+                                    {
+                                        <option value="Non" selected>Non</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Non">Non</option>
+                                    }
 
-                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="texte" class="form-label">Recherche par nom</label>
+                                <input type="text" class="form-control" id="texte" value="@Model.Criteres.Nom" name="Nom">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="number" class="form-label">Prime minimum</label>
+                                <input type="text" class="form-control" id="number" value="@Model.Criteres.MinPrime" name="MinPrime">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Type de fruits</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Zoan" value="true" name="EstFruitZoan" @(Model.Criteres.EstFruitZoan ? "checked" : "")>
+                                    <label class="form-check-label" for="Zoan">Zoan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="logia" value="true" name="EstFruitLogia" @(Model.Criteres.EstFruitLogia ? "checked" : "")>
+                                    <label class="form-check-label" for="logia">Logia</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="Paramecia" value="true" name="EstFruitParamecia" @(Model.Criteres.EstFruitParamecia ? "checked" : "")>
+                                    <label class="form-check-label" for="Paramecia">Paramecia</label>
+                                </div>
+                            </div>
+
+                            <button type="reset" class="btn btn-secondary w-100 mb-2">Réinitialiser</button>
+                            <button type="submit" class="btn btn-primary w-100">Rechercher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="row">
+            <div class="col-md-9 col-sm-12">
+                <h1 class="text-center my-4">All Devil Fruits</h1>
+                
+                @if (Model.Resultat.Count > 0)
+                {
+                    <div class="row">
+                        @foreach (dynamic item in Model.Resultat)
+                        {
+                            <div class="col-md-6 col-sm-12 mb-4">
+                                <div class="card h-100">
                                     <partial name="_EnfantPartial" for="@item" />
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h3 class="card-title">@item.Nom</h3>
-                                            <p class="card-text">@item.Occupation</p>
-                                        </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">@item.Nom</h3>
+                                        <p class="card-text">@item.Occupation</p>
                                     </div>
                                 </div>
-                            }
-                        </div>
-                    </div>
-            }
-            else
-                {
-                    <div class="col-md-9 col-sm-12 col-xs-12">
-                    <p>AUCUN PERSONAGE TROUVER</p>
+                            </div>
+                        }
                     </div>
                 }
-            }
-            
-            
-
-
-            <!--  formulaire -->
-            <div class="col-md-3 col-sm-12 col-xs-12">
-                <div class="form-group">
-                   
-                    
-                    <form action="@Url.Action("Filtrer","Enfant")" method="get">
-                        <label for="vedette">Personnage vedette</label>
-                        <select class="form-control" id="vedette" name="ChoixPourPersonnageVedette">
-                            @if (Model.Criteres.ChoixPourPersonnageVedette == "Peu importe")
-                            {
-                                <option value="Peu importe" selected>Peu importe</option>
-                            }
-                            else
-                            {
-                                <option value="Peu importe">Peu importe</option>
-
-                            }
-                            @if (Model.Criteres.ChoixPourPersonnageVedette == "Oui")
-                            {
-                                <option value="Oui" selected>Oui</option>
-                            }
-                            else
-                            {
-                                <option value="Oui">Oui</option>
-                            }
-                            @if (Model.Criteres.ChoixPourPersonnageVedette == "Non")
-                            {
-                                <option value="Non" selected>Non</option>
-                            }
-                            else
-                            {
-                                <option value="Non">Non</option>
-                            }
-
-                        </select>
-                        <div class="form-group">
-                            <label for="texte">Recherche par nom</label>
-                            <input type="text" class="form-control" id="texte" value="@Model.Criteres.Nom" name="Nom">
-                        </div>
-                        <label for="number">Prime minimum</label>
-                        <input type="text" class="form-control" id="number" value="@Model.Criteres.MinPrime" name="MinPrime">
-
-                        <label for="texte">type de fruits</label>
-                        <div class="form-check">
-                            @if (Model.Criteres.EstFruitZoan)
-                            {
-                                <input class="form-check-input" type="checkbox" id="Zoan" value="true" name="EstFruitZoan" checked>
-                            }
-                            else
-                            {
-                                <input class="form-check-input" type="checkbox" id="Zoan" value="true" name="EstFruitZoan" >
-                            }
-                            <label for="Zoan">Zoan</label>
-                        </div>
-                        <div class="form-check">
-                            @if (Model.Criteres.EstFruitLogia)
-                            {
-                                <input class="form-check-input" type="checkbox" id="logia" value="true" name="EstFruitLogia" checked>
-                            }
-                            else
-                            {
-                                <input class="form-check-input" type="checkbox" id="logia" value="true" name="EstFruitLogia">
-                            }
-                            
-                            <label for="logia">Logia</label>
-                        </div>
-                        <div class="form-check">
-                            @if (Model.Criteres.EstFruitParamecia)
-                            {
-                                <input class="form-check-input" type="checkbox" id="Paramecia" value="true" name="EstFruitParamecia" checked>
-                            }
-                            else
-                            {
-                                <input class="form-check-input" type="checkbox" id="Paramecia" value="true" name="EstFruitParamecia" >
-                            }
-                            <label for="Paramecia">Paramecia</label>
-                        </div>
-                        <button type="reset" class="btn btn-secondary">Réinitialiser</button>
-                        <button type="submit" class="btn btn-primary">Rechercher</button>
-                    </form>
+                else
+                {
+                    <div class="alert alert-warning" role="alert">
+                        Aucun personnage trouvé.
+                    </div>
+                }
                 </div>
             </div>
         </div>
-       </div>
-
-
-        
+    </div>
 </main>
