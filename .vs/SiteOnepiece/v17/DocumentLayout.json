@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\controllers\\parentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\controllers\\parentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\parent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\parent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|c:\\users\\gabri\\onedrive\\desktop\\tp1gabtm\\siteonepiece\\views\\enfant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9DD0EE2A-7ECE-4383-9886-A710107B8624}|SiteOnepiece\\SiteOnepiece.csproj|solutionrelative:siteonepiece\\views\\enfant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 204,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ParentController.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Controllers\\ParentController.cs",
-              "RelativeDocumentMoniker": "SiteOnepiece\\Controllers\\ParentController.cs",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Controllers\\ParentController.cs",
-              "RelativeToolTip": "SiteOnepiece\\Controllers\\ParentController.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFoAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T04:21:38.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Parent\\Index.cshtml",
-              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Parent\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Parent\\Index.cshtml",
-              "RelativeToolTip": "SiteOnepiece\\Views\\Parent\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T04:19:25.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Index.cshtml",
-              "RelativeDocumentMoniker": "SiteOnepiece\\Views\\Enfant\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Desktop\\tp1GabTm\\SiteOnepiece\\Views\\Enfant\\Index.cshtml",
-              "RelativeToolTip": "SiteOnepiece\\Views\\Enfant\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T04:18:24.38Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

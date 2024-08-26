@@ -67,28 +67,28 @@ namespace SiteOnepiece.Controllers
         }
         public IActionResult Delete(int id)
         {
-            Parent? zombieType = DB.Parents.Find(id);
-            if (zombieType == null)
+            Parent? parent = DB.Parents.Find(id);
+            if (parent == null)
             {
                 return NotFound();
             }
 
-            return View(zombieType);
+            return View(parent);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult DeletePost(int id)
         {
-            Parent? zombieType = DB.Parents.Find(id);
-            if (zombieType == null)
+            Parent? parent = DB.Parents.Find(id);
+            if (parent == null)
             {
                 return NotFound();
             }
 
-            DB.Parents.Remove(zombieType);
+            DB.Parents.Remove(parent);
             DB.SaveChanges();
-            TempData["Success"] = $"Capitain {zombieType.Nom} has been removed";
+            TempData["Success"] = $"Capitain {parent.Nom} has been removed";
             return RedirectToAction("Index");
         }
     }
