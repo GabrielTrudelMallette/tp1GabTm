@@ -1,32 +1,50 @@
 ﻿@model SiteOnepiece.Models.Parent
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Créer un grand-pirate";
 }
 
-<form method="post" asp-action="Create">
-    <div class="container py-4">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <input type="hidden" asp-for="@Model.Nom" />
+<h1 class="text-primary text-center my-4">Créer ton grand-pirate</h1>
 
-        <!-- Title Section -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="text-center text-primary border-bottom pb-2">Crée ton propre Grand pirate</h2>
+<hr class="mb-4" />
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">Nouvelle entrée de pirate</h3>
+            </div>
+            <div class="card-body p-5">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+
+                    <div class="mb-4 row">
+                        <label asp-for="Nom" class="col-sm-4 col-form-label fw-bold">Nom du pirate :</label>
+                        <div class="col-sm-8">
+                            <input asp-for="Nom" class="form-control" />
+                            <span asp-validation-for="Nom" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 row">
+                        <label asp-for="Description" class="col-sm-4 col-form-label fw-bold">Description :</label>
+                        <div class="col-sm-8">
+                            <textarea asp-for="Description" class="form-control custom-editor" id="descriptionEditor"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <!-- Champs cachés -->
+                    <div class="d-none">
+                        <input asp-for="MoyennePrime" value="10" />
+                        <input asp-for="ImageURL" value="images/Ope_Ope_no_Mi_Infobox.jpg" />
+                        <input asp-for="nombreUtilisateur" value="20" />
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <input type="submit" class="btn btn-success btn-lg px-4 py-2" value="Créer" />
+                        <a asp-action="Index" class="btn btn-secondary btn-lg px-4 py-2">Retour à la liste</a>
+                    </div>
+                </form>
             </div>
         </div>
-
-        <!-- Form Fields Section -->
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <!-- Nom -->
-                <div class="form-group row mb-3">
-                    <label asp-for="@Model.Nom" class="col-sm-4 col-form-label">Nom du Pirate</label>
-                    <div class="col-sm-8">
-                        <input asp-for="@Model.Nom" class="form-control" />
-                        <span asp-validation-for="@Model.Nom" class="text-danger"></span>
-                    </div>
-                </div>
-                </>
-               
-</form>
+    </div>
+</div>

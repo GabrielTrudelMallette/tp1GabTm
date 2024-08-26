@@ -1,0 +1,37 @@
+﻿@model SiteOnepiece.Models.Parent
+
+@{
+    ViewData["Title"] = "Supprimer votre pirate ?";
+}
+
+<h1 class="text-danger text-center my-4">Supprimer votre pirate ?</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-danger text-white text-center">
+                <h3 class="mb-0">Attention !</h3>
+            </div>
+            <div class="card-body p-5">
+                <form asp-action="DeletePost" asp-route-Id="@Model.Id">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-4">
+                        <label asp-for="Nom" class="form-label fw-bold">Nom du pirate :</label>
+                        <div class="form-control-plaintext fs-5">@Model.Nom</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Description" class="form-label fw-bold">Description :</label>
+                        <div class="form-control-plaintext fs-5">@Model.Description</div>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                        <input type="submit" value="Supprimer" class="btn btn-danger btn-lg px-4 py-2" />
+                        <a class="btn btn-secondary btn-lg px-4 py-2" asp-action="Index">Retour à la liste</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

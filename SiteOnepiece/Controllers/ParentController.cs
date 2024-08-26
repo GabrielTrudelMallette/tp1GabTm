@@ -24,15 +24,12 @@ namespace SiteOnepiece.Controllers
         //get create
         [Route("Parent/Create")]
         public IActionResult Create()
-        {
-            
-           
-
+        {          
             return View();
         }
 
         [HttpPost("Parent/Create")]
-        
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Parent parent)
         {
             if (ModelState.IsValid)
@@ -41,62 +38,58 @@ namespace SiteOnepiece.Controllers
                 DB.SaveChanges();
                 TempData["Ajouter"] = $" Pirate {parent.Nom} Ajouter";
                 return this.RedirectToAction("Index");
-            }
-
-            ViewBag.ParentList = DB.Parents.Select(p => new SelectListItem
-            {
-                Text = p.Nom,
-                Value = p.Id.ToString(),
-            }).OrderBy(p => p.Text);
+            }          
 
             return View(parent);
         }
 
         public IActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var parent = DB.Parents.Find(id);
-            if (parent == null)
-            {
-                return NotFound();
-            }
-
-            ViewBag.ParentList = DB.Parents.Select(t => new SelectListItem
-            {
-                Text = t.Nom,
-                Value = t.Id.ToString()
-            });
+            Parent parent = DB.Parents.Find(id);            
 
             return View(parent);
         }
 
         [HttpPost]
-        public IActionResult Edit(int id,Parent parent)
-        {
-            if (id != parent.Id)
-            {
-                return NotFound();
-            }
+        public IActionResult EditPost(Parent parent)
+        {          
 
             if (ModelState.IsValid)
             {
                 DB.Update(parent);
                 DB.SaveChanges();
-
+                TempData["Success"] = $"Capitain {parent.Nom} a été modifier";
                 return RedirectToAction(nameof(Index));
             }
-
-            ViewBag.ParentList = DB.Parents.Select(t => new SelectListItem
-            {
-                Text = t.Nom,
-                Value = t.Id.ToString()
-            });
+           
 
             return View(parent);
+        }
+        public IActionResult Delete(int id)
+        {
+            Parent? zombieType = DB.Parents.Find(id);
+            if (zombieType == null)
+            {
+                return NotFound();
+            }
+
+            return View(zombieType);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int id)
+        {
+            Parent? zombieType = DB.Parents.Find(id);
+            if (zombieType == null)
+            {
+                return NotFound();
+            }
+
+            DB.Parents.Remove(zombieType);
+            DB.SaveChanges();
+            TempData["Success"] = $"ZombieType {zombieType.Nom} has been removed";
+            return RedirectToAction("Index");
         }
     }
 }
