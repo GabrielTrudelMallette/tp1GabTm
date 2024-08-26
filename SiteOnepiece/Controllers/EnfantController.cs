@@ -132,10 +132,10 @@ namespace SiteOnepiece.Controllers
                 return this.RedirectToAction("Index");
             }
             
-            enfantVM.ParentList = DB.Enfants.Select(p => new SelectListItem
+            enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem
             {
                 Text = p.Nom,
-                Value = p.id.ToString(),
+                Value = p.Id.ToString(),
             }).OrderBy(p => p.Text);
 
 

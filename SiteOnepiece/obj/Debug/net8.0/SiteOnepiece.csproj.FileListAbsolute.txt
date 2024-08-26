@@ -664,3 +664,5 @@ C:\Users\6221324\Desktop\tp1GabTm\SiteOnepiece\obj\Debug\net8.0\refint\SiteOnepi
 C:\Users\6221324\Desktop\tp1GabTm\SiteOnepiece\obj\Debug\net8.0\SiteOnepiece.pdb
 C:\Users\6221324\Desktop\tp1GabTm\SiteOnepiece\obj\Debug\net8.0\SiteOnepiece.genruntimeconfig.cache
 C:\Users\6221324\Desktop\tp1GabTm\SiteOnepiece\obj\Debug\net8.0\ref\SiteOnepiece.dll
+C:\Users\gabri\OneDrive\Desktop\tp1GabTm\SiteOnepiece\bin\Debug\net8.0\BootstrapBlazor.dll
+C:\Users\gabri\OneDrive\Desktop\tp1GabTm\SiteOnepiece\bin\Debug\net8.0\BootstrapBlazor.SummerNote.dll
