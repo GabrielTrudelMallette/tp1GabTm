@@ -36,7 +36,7 @@ namespace SiteOnepiece.Controllers
             {
                 DB.Parents.Add(parent);
                 DB.SaveChanges();
-                TempData["Ajouter"] = $" Pirate {parent.Nom} Ajouter";
+                TempData["Success"] = $" Pirate {parent.Nom} Ajouter";
                 return this.RedirectToAction("Index");
             }          
 
@@ -88,7 +88,7 @@ namespace SiteOnepiece.Controllers
 
             DB.Parents.Remove(zombieType);
             DB.SaveChanges();
-            TempData["Success"] = $"ZombieType {zombieType.Nom} has been removed";
+            TempData["Success"] = $"Capitain {zombieType.Nom} has been removed";
             return RedirectToAction("Index");
         }
     }

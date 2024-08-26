@@ -165,7 +165,7 @@ namespace SiteOnepiece.Controllers
             }
             DB.Enfants.Remove(enfant);
             DB.SaveChanges();
-            TempData["Delete"] = $"Enfant {enfant.Nom} a été supprimer";
+            TempData["Success"] = $"Enfant {enfant.Nom} a été supprimer";
             return RedirectToAction("Index");
         }
         [Route("Enfant/Edit")]
@@ -193,7 +193,7 @@ namespace SiteOnepiece.Controllers
             {
                 DB.Enfants.Update(enfantVM.Enfant);
                 DB.SaveChanges();
-                TempData["Modifier"] = $"Enfant {enfantVM.Enfant.Nom} a été modifier";
+                TempData["Success"] = $"Enfant {enfantVM.Enfant.Nom} a été modifier";
                 return this.RedirectToAction("index");
             }
             enfantVM.ParentList = DB.Parents.Select(p => new SelectListItem

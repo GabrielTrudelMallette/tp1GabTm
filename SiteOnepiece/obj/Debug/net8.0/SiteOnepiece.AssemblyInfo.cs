@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SiteOnepiece")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5aaca3cf9a08fbc1e979e05f7a2a1193d036eb39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+427df56111439038d19bd49ad54f98e3c772a83b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SiteOnepiece")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SiteOnepiece")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
